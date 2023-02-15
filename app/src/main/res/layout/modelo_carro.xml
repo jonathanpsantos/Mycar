@@ -14,7 +14,7 @@
 
 
         <ImageView
-            android:id="@+id/idImgcar"
+            android:id="@+id/imgMgcar"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_alignParentTop="true"
@@ -26,7 +26,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/idTextModelocar"
+                android:id="@+id/idmTextModelocar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/idImgcar"
@@ -36,7 +36,7 @@
 
 
             <TextView
-                android:id="@+id/idTextFabricacaocar"
+                android:id="@+id/idmTextFabricacaocar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="180dp"
@@ -44,23 +44,39 @@
                 android:textColor="#000" />
 
             <TextView
-                android:id="@+id/idTextDescricaocar"
+                android:id="@+id/idmTextDescricaocar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
-                android:text="NOVO ONIX 1.0 LT TURBO (Conf. 5B48HP), pacote R6S ano/modelo 2022/2023        pintura na cor PRETO OURO NEGRO" />
+                android:text="NOVO ONIX 1.0 LT TURBO (Conf. 5B48HP), pacote R6S ano/modelo 2022/2023        pintura na cor PRETO OURO NEGRO"
+                android:textColor="#000" />
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:text="R$ 99.900,00 "
-                android:textColor="#ED2F2F"
-                android:textSize="19sp"
-                android:textStyle="italic" />
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Por apenas:"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/idmValorcar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="R$ 99.900,00 "
+                    android:textColor="#ED2F2F"
+                    android:textSize="19sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -76,11 +92,12 @@
                     android:numStars="1" />
 
                 <TextView
-                    android:layout_marginTop="10dp"
-                    android:textSize="20sp"
+                    android:id="@+id/idmRatingvalor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5.0"/>
+                    android:layout_marginTop="10dp"
+                    android:text="5.0"
+                    android:textSize="20sp" />
 
                 <ImageView
                     android:layout_width="30dp"
