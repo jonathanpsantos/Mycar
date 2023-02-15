@@ -17,15 +17,16 @@ public class MainActivity extends AppCompatActivity {
 
 
    // ImageView imgMgcar;
-   // TextView idmTextModelocar, idmTextFabricacaocar, idmTextDescricaocar, idmValorcar, idmRatingvalor;
+   // TextView idmTextModelocar, idmTextFabricacaocar, idmTextDescricaocar, idmValorcar, idmRatingvalor ,;
 
-    String modeloCar []= {"Onix"};
-    String fabricanteCar []= {"Chevrolet"};
-    String descricaoCar[] = {"Onix preto "};
-    String valorCar [] = {"R$ 99.990.00"};
-    String ratingValor [] = {"5.0"};
+    String modeloCar []= {"Onix","Argo","Spin","Creta","Kwid"};
+    String fabricanteCar []= {"Chevrolet","Fiat","Chevrolet","Hyunda","Renault"};
+    String fabricacaoCar [] = {"2022/2023","2022/2023", "2022","2022","2022"};
+    String descricaoCar[] = {"NOVO ONIX 1.0 LT TURBO (Conf. 5B48HP), pacote R6S ano/modelo 2022/2023  pintura na cor PRETO OURO NEGRO ","1.0 Firefly Drive Manual com 11.578 Km rodados ","1.8 Lt 8v Automático com 53.517 Km rodados","1.6 16v Action Automático com 22.438 Km rodados","1.0 12v Sce Zen Manual com 6.453 Km rodados "};
+    String valorCar [] = {"R$ 99.900,00","R$ 72.870","R$ 75.870","R$ 100.470","R$ 56.970"};
+    String ratingValor [] = {"4.5","4.0","4.2","4.8","4.6"};
 
-    int imageCarro [] = {R.drawable.onix_car};
+    int imageCarro [] = {R.drawable.onix_car,R.drawable.fiatargo,R.drawable.spin,R.drawable.creta};
 
 
     @Override
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
 
             ImageView imgMgcar;
-            TextView idmTextModelocar, idmTextFabricacaocar, idmTextDescricaocar, idmValorcar, idmRatingvalor;
+            TextView idmTextModelocar, idmTextFabricante, idmTextDescricaocar, idmValorcar, idmRatingvalor, idmTextFabricacaocar;
 
             // Adaptador ligando ao modelo
             View v = getLayoutInflater().inflate(R.layout.modelo_carro, null );
@@ -72,15 +73,16 @@ public class MainActivity extends AppCompatActivity {
 
             imgMgcar = v.findViewById(R.id.imgMgcar);
             idmTextModelocar = v.findViewById(R.id.idmTextModelocar);
-            idmTextFabricacaocar = v.findViewById(R.id.idmTextFabricacaocar);
+            idmTextFabricante = v.findViewById(R.id.idmTextFabricacaocar);
             idmTextDescricaocar = v.findViewById(R.id.idmTextDescricaocar);
             idmValorcar = v.findViewById(R.id.idmValorcar);
             idmRatingvalor = v.findViewById(R.id.idmRatingvalor);
-
+            idmTextFabricacaocar = v.findViewById(R.id.idmTextFabricacaocar);
             //Inserindo os valores nas variaveis do java
 
             idmTextModelocar.setText(modeloCar[i]);
-            idmTextFabricacaocar.setText(fabricanteCar[i]);
+            idmTextFabricacaocar.setText(fabricacaoCar[i]);
+            idmTextFabricante.setText(fabricanteCar[i]);
             idmTextDescricaocar.setText(descricaoCar[i]);
             idmValorcar.setText(valorCar[i]);
             idmRatingvalor.setText(ratingValor[i]);
